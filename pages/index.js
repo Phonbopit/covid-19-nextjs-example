@@ -10,13 +10,14 @@ const fetcher = url => fetch(url).then(r => r.json());
 import columns from '../components/DataTableColumns';
 import DataChart from '../components/DataChart';
 import TimeSeriesChart from '../components/TimeSeriesChart';
+import Loading from '../components/Loading';
 
 const IndexPage = () => {
   const { data, error } = useSWR(apiUrl, fetcher);
   const { data: timeseries } = useSWR(timeSeriesUrl, fetcher);
 
   if (!data) {
-    return <p>Not found</p>;
+    return <Loading />;
   }
 
   if (error) {
