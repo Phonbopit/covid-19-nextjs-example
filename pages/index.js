@@ -24,6 +24,10 @@ const IndexPage = () => {
     return <p>Error...</p>;
   }
 
+  const sortedData = data.Countries.sort((a, b) =>
+    a.TotalConfirmed < b.TotalConfirmed ? 1 : -1
+  );
+
   return (
     <div className="container">
       <style jsx>
@@ -49,7 +53,7 @@ const IndexPage = () => {
       <DataTable
         title="COVID-19 Summary"
         columns={columns}
-        data={data.Countries}
+        data={sortedData}
         pagination={true}
       />
 
