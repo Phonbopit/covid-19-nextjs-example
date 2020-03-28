@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-covid-19-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "next build && next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "9.3.2",
+    "react": "16.13.1",
+    "react-data-table-component": "6.3.1",
+    "react-dom": "16.13.1",
+    "recharts": "1.8.5",
+    "styled-components": "5.0.1",
+    "swr": "0.1.18",
+    "unfetch": "4.1.0"
+  }
+}
