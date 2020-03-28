@@ -46,6 +46,11 @@ const IndexPage = () => {
           .title {
             text-align: center;
           }
+
+          footer {
+            text-align: center;
+            padding: 2rem 0;
+          }
         `}
       </style>
       <h2 className="title">COVID-19 Example with Next.js</h2>
@@ -62,6 +67,26 @@ const IndexPage = () => {
       <TimeSeriesChart data={timeseries.Thailand} title="Thailand Summary" />
       <TimeSeriesChart data={timeseries.US} title="US Summary" />
       <TimeSeriesChart data={timeseries.China} title="China Summary" />
+
+      <footer>
+        <p>
+          <a
+            href="https://github.com/Phonbopit/covid-19-nextjs-example"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source Code
+          </a>
+          {' by '}
+          <a
+            href="https://devahoy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Devahoy.com
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
