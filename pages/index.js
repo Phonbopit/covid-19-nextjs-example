@@ -12,6 +12,14 @@ import DataChart from '../components/DataChart';
 import TimeSeriesChart from '../components/TimeSeriesChart';
 import Loading from '../components/Loading';
 
+const customStyle = {
+  tableWrapper: {
+    style: {
+      display: 'block'
+    }
+  }
+};
+
 const IndexPage = () => {
   const { data, error } = useSWR(apiUrl, fetcher);
   const { data: timeseries } = useSWR(timeSeriesUrl, fetcher);
@@ -57,6 +65,7 @@ const IndexPage = () => {
 
       <DataTable
         title="COVID-19 Summary"
+        customStyles={customStyle}
         columns={columns}
         data={sortedData}
         pagination={true}
